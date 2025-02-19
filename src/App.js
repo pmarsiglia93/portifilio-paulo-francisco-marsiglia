@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Introducao from './components/Introducao/Introducao';
 import Experiencia from './components/Experiencia/Experiencia';
 import Formacao from './components/Formacao/Formacao';
+import Projetos from './components/Projetos/Projetos';
 import Footer from './components/Footer/Footer';
 import './styles/global.css';
 
@@ -15,6 +16,7 @@ const App = () => {
       <Introducao />
       <Experiencia />
       <Formacao />
+      <Projetos />      
       <Footer />
     </>
   );
