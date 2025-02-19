@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import './Projetos.css';
 import projeto1 from '../../assets/projeto1.png';
+import projeto2 from '../../assets/projeto2.png';
+import projeto3 from '../../assets/projeto3.png';
+import projeto4 from '../../assets/projeto4.png';
 
 const projetos = [
   {
@@ -13,11 +16,25 @@ const projetos = [
   },
   {
     id: 2,
-    titulo: 'Projeto 2',
-    imagem: '/assets/projeto2.jpg',
-    site: 'https://projeto2.com',
-    repositorio: 'https://github.com/seuusuario/projeto2'
+    titulo: 'Pesquisa Ativa',
+    imagem: projeto2,
+    site: 'https://pesquisa-ativa-negocios-sigma.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/pesquisa-ativa-negocios'
   },
+  {
+    id: 3,
+    titulo: 'Filmes API',
+    imagem: projeto3,
+    site: 'https://case-stalse.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/case-stalse'
+  },
+  {
+    id: 4,
+    titulo: 'Wishlist',
+    imagem: projeto4,
+    site: 'https://case-b8one.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/case-stalse'
+  }
 ];
 
 const Projetos = () => {
