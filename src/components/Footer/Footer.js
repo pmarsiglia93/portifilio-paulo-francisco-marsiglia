@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer-container">
         <p className="footer-texto">Estou disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 👋</p>
         <ul className="footer-contato">
-          <li>lobo@email.com</li>
-          <li>+55 21 9999-9999</li>
+          <li>pmarsiglia93@gmail.com</li>
+          <li>+55 11 96572-7895</li>
         </ul>
-        <p className="footer-copy">Lobo. Alguns direitos reservados.</p>
+        <p className="footer-copy">Paulo Francisco Marsgilia. Alguns direitos reservados.</p>
       </div>
     </footer>
   );

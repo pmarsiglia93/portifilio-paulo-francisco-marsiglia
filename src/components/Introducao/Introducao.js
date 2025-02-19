@@ -8,8 +8,8 @@ const Introducao = () => {
     <main className="container introducao">
       <img src={perfil} alt="Lobo Cinza" />
       <div>
-        <h1>Desenvolvedor<br />Front End &<br /> UX/UI Designer</h1>
-        <p>Localizado no Rio de Janeiro 🏖</p>
+        <h1>Desenvolvedor<br />Front End <br /></h1>
+        <p>Localizado em São Paulo</p>
       </div>
     </main>
   );
