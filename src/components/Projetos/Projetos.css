@@ -121,3 +121,26 @@
 .btn:hover {
     background-color: #67dd0a;
 }
+
+@media (max-width: 800px){
+    .projetos-container {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .projetos{
+        padding: 0;
+    }
+    
+    .projetos .subtitulo {
+        color: #000;
+    }
+    .projetos-texto {
+        font-size: 1.25rem;
+    }
+    .projetos-extra h3::before{
+        position: initial;
+        margin-bottom: 10px;
+    }
+}

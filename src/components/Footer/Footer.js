@@ -11,7 +11,7 @@ const Footer = () => {
           <li>pmarsiglia93@gmail.com</li>
           <li>+55 11 96572-7895</li>
         </ul>
-        <p className="footer-copy">Paulo Francisco Marsgilia. Alguns direitos reservados.</p>
+        <p className="footer-copy">Paulo Francisco Marsiglia. Alguns direitos reservados.</p>
       </div>
     </footer>
   );
