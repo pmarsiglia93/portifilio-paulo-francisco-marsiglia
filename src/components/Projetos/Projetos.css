@@ -143,4 +143,8 @@
         position: initial;
         margin-bottom: 10px;
     }
+
+    .modal-content{
+        padding: 45px;
+    }
 }

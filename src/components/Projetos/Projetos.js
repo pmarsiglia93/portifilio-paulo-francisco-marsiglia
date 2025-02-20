@@ -33,7 +33,7 @@ const projetos = [
     titulo: 'Wishlist',
     imagem: projeto4,
     site: 'https://case-b8one.vercel.app/',
-    repositorio: 'https://github.com/pmarsiglia93/case-stalse'
+    repositorio: 'https://github.com/pmarsiglia93/case-b8one'
   }
 ];
 
