@@ -103,6 +103,29 @@
     margin-bottom: 20px;
 }
 
+.modal-descricao {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+.modal-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: #141414;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+
 .modal-buttons {
     display: flex;
     justify-content: center;
