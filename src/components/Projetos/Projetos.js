@@ -11,7 +11,7 @@ const projetos = [
   {
     id: 1,
     titulo: 'Bikcraft',
-    descricao: 'Bikcraft é um e-commerce fictício para venda de bicicletas elétricas, desenvolvido com HTML, CSS e JavaScript. O projeto foca em boas práticas de código, HTML semântico, CSS modular e animações para uma experiência dinâmica e responsiva. Além da interface moderna, conta com funcionalidades interativas, como exibição de modelos de bicicletas e um formulário de contato para simulação de compra.',
+    descricao: 'Bikcraft é um e-commerce fictício para venda de bicicletas elétricas, desenvolvido com HTML, CSS e JavaScript. O projeto foca em boas práticas de código, HTML semântico, CSS modular e animações para uma experiência dinâmica e responsiva.',
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
     imagem: projeto1,
     site: 'https://bikcraft-psi-beige.vercel.app/',
@@ -29,7 +29,7 @@ const projetos = [
   {
     id: 3,
     titulo: 'Filmes API',
-    descricao: 'Filmes API é uma aplicação desenvolvida com React que consome a OMDB API para exibir informações de filmes. O projeto apresenta uma interface responsiva e moderna, organizando os filmes em categorias temáticas, como Batman, Vingadores e Homem-Aranha. Cada página exibe quatro títulos relevantes, trazendo detalhes diretamente da API para uma experiência dinâmica e fluida.',
+    descricao: 'Filmes API é uma aplicação desenvolvida com React que consome a OMDB API para exibir informações de filmes. O projeto apresenta uma interface responsiva e moderna, organizando os filmes em categorias temáticas, como Batman, Vingadores e Homem-Aranha.',
     tecnologias: ['HTML', 'CSS','Javascript', 'API Rest'],
     imagem: projeto3,
     site: 'https://case-stalse.vercel.app/',
@@ -38,7 +38,7 @@ const projetos = [
   {
     id: 4,
     titulo: 'Wishlist / Cart',
-    descricao: 'Wishlist / Cart é uma aplicação desenvolvida com React que permite adicionar produtos a uma lista de favoritos e a um carrinho de compras. Utilizando HTML, CSS e JavaScript, o projeto apresenta uma interface dinâmica e responsiva, onde os usuários podem visualizar e gerenciar seus produtos salvos.',
+    descricao: 'Wishlist / Cart é uma aplicação desenvolvida com React que permite adicionar produtos a uma lista de favoritos e a um carrinho de compras. O projeto apresenta uma interface dinâmica e responsiva, onde os usuários podem visualizar e gerenciar seus produtos salvos.',
     tecnologias: ['HTML', 'CSS', 'Javascript', 'React'],
     imagem: projeto4,
     site: 'https://case-b8one.vercel.app/',
@@ -46,8 +46,8 @@ const projetos = [
   },
   {
     id: 5,
-    titulo: 'Calculadora de gasto energetico',
-    descricao: 'Esta calculadora foi desenvolvida com React para estimar a taxa de metabolismo basal (TMB), tanto em repouso quanto com diferentes níveis de atividade física: sedentária, moderada e intensa. Utilizando HTML, CSS e JavaScript, a aplicação oferece uma interface intuitiva e responsiva, permitindo cálculos precisos para auxiliar no planejamento nutricional e controle de gastos calóricos diários.',
+    titulo: 'Calculadora de gasto energético',
+    descricao: 'Esta calculadora foi desenvolvida com React para estimar a taxa de metabolismo basal (TMB), tanto em repouso quanto com diferentes níveis de atividade física: sedentária, moderada e intensa.',
     tecnologias: ['HTML', 'CSS', 'Javascript', 'React'],
     imagem: projeto5,
     site: 'https://calculadora-tmb-eight.vercel.app/',
@@ -57,6 +57,13 @@ const projetos = [
 
 const Projetos = () => {
   const [modalProjeto, setModalProjeto] = useState(null);
+
+  // Função para fechar o modal ao clicar fora dele
+  const handleOutsideClick = (e) => {
+    if (e.target.classList.contains("modal")) {
+      setModalProjeto(null);
+    }
+  };
 
   return (
     <section className="projetos" id="projetos" aria-label="Projetos">
@@ -72,7 +79,7 @@ const Projetos = () => {
         </div>
       </div>
       {modalProjeto && (
-        <div className="modal">
+        <div className="modal" onClick={handleOutsideClick}>
           <div className="modal-content">
             <span className="close" onClick={() => setModalProjeto(null)}>&times;</span>
             <img src={modalProjeto.imagem} alt={modalProjeto.titulo} className="modal-img" />
