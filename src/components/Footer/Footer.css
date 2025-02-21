@@ -1,3 +1,5 @@
+/* src/components/Footer/Footer.css */
+
 .footer {
     background-color: #000;
 }
@@ -28,6 +30,23 @@
 
 .footer-contato li a {
     color: #fff;
+    text-decoration: none;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
 }
 
 .footer-copy {
@@ -40,9 +59,14 @@
     .footer-container {
         grid-template-columns: 1fr;
         gap: 40px;
+        text-align: center;
     }
 
     .footer-contato li {
         font-size: 1.5rem;
+    }
+
+    .footer-icons {
+        justify-content: center;
     }
 }
