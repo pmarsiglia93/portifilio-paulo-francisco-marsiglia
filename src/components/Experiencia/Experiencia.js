@@ -7,7 +7,14 @@ const Experiencia = () => {
     <section className="container experiencia" id="experiencia" aria-label="Experiência">
       <h2 className="subtitulo">Experiência</h2>
       <div>
-        <p className="experiencia-texto">Desenvolvo interfaces dinâmicas e responsivas utilizando <strong>React</strong>, <strong>JavaScript</strong> e <strong>TypeScript</strong>. Para plataformas de e-commerce, trabalhei com <strong>VTEX IO</strong> e <strong>VTEX Legacy</strong>, criando componentes escaláveis e otimizados para performance.</p>
+        <p className="experiencia-texto">
+          Atuo como desenvolvedor front-end e full stack, criando interfaces dinâmicas e responsivas com  
+          <strong> React</strong>, <strong>Vue.js 2</strong>,<strong>Angular</strong>, <strong>Preact (Deco)</strong>, <strong>JavaScript</strong> e 
+          <strong> TypeScript</strong>, sempre com foco em performance, UX e layouts fiéis ao Figma. 
+          No back-end, tenho experiência com <strong>Node.js</strong> (APIs REST) e 
+          <strong> Java com Spring Boot</strong> para criação e manutenção de serviços, integrações e regras de negócio, 
+          conectando front-end e back-end de forma consistente em aplicações web e plataformas de e-commerce.
+        </p>
 
         <div className="empresa">
           <span className="empresa-ano">06/2025 – Atual</span>
