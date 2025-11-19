@@ -10,6 +10,56 @@ const Experiencia = () => {
         <p className="experiencia-texto">Desenvolvo interfaces dinâmicas e responsivas utilizando <strong>React</strong>, <strong>JavaScript</strong> e <strong>TypeScript</strong>. Para plataformas de e-commerce, trabalhei com <strong>VTEX IO</strong> e <strong>VTEX Legacy</strong>, criando componentes escaláveis e otimizados para performance.</p>
 
         <div className="empresa">
+          <span className="empresa-ano">06/2025 – Atual</span>
+          <h3 className="empresa-titulo">Quality Digital</h3>
+          <span className="empresa-titulo">Desenvolvedor Front-end</span>
+          <p className="empresa-texto">
+            Desenvolvimento de sections, componentes modulares e landing pages para Electrolux,
+            Frigidaire e marcas Latam, utilizando Deco (Preact + Tailwind) e VTEX IO (React).
+            Implementação de layouts pixel-perfect a partir do Figma, garantindo responsividade,
+            consistência visual e manutenção via CMS. Integração com APIs REST, criação de componentes
+            configuráveis e suporte a múltiplos idiomas e domínios. Atuação em fluxo de desenvolvimento
+            com branches dedicadas (feature/fix/release), atualização de CHANGELOG, abertura de PRs
+            revisados e alinhamento constante com PO e QA.
+          </p>
+          <ul className="empresa-habilidades">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Preact</li>
+            <li>Tailwind CSS</li>
+            <li>VTEX IO</li>
+            <li>Deco</li>
+            <li>APIs REST</li>
+            <li>Figma</li>
+            <li>Git</li>
+          </ul>
+        </div>
+
+        <div className="empresa">
+          <span className="empresa-ano">07/2025 - atual</span>
+          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
+          <span className="empresa-titulo">Desenvolvedor Front-end (Freelancer)</span>
+          <p className="empresa-texto">
+            Manutenção e evolução de plataforma web em Vue.js 2, com foco em refatoração de código,
+            remoção de estilos inline, criação de componentes reutilizáveis e melhorias de UX.
+            Atuação em telas de avaliações, pagamentos, modais, formulários e contratos em PDF,
+            garantindo responsividade e estabilidade em produção. Correção de bugs e alinhamento
+            com o time interno para padronização de código e qualidade das entregas.
+          </p>
+          <ul className="empresa-habilidades">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Vue.js 2</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+
+
+
+        <div className="empresa">
           <span className="empresa-ano">09/2024 - 11/2024</span>
           <h3 className="empresa-titulo">Stalse Analytics</h3>
           <span className="empresa-titulo">Desenvolvedor Front-end</span>
