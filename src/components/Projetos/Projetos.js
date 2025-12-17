@@ -6,6 +6,7 @@ import projeto2 from '../../assets/projeto2.png';
 import projeto3 from '../../assets/projeto3.png';
 import projeto4 from '../../assets/projeto4.png';
 import projeto5 from '../../assets/projeto5.png';
+import projeto6 from '../../assets/projeto6.png';
 
 const projetos = [
   {
@@ -52,6 +53,15 @@ const projetos = [
     imagem: projeto5,
     site: 'https://calculadora-tmb-eight.vercel.app/',
     repositorio: 'https://github.com/pmarsiglia93/calculadora-tmb'
+  },
+  {
+    id: 6,
+    titulo: 'Pokedex',
+    descricao: 'Desenvolvi uma Pokédex em JavaScript Vanilla, com layout em HTML/CSS e integração com a PokéAPI. O projeto permite navegar pelos Pokémon, pesquisar rapidamente e trocar páginas, com um visual limpo e adaptado para desktop e mobile.',
+    tecnologias: ['HTML', 'CSS', 'Javascript'],
+    imagem: projeto6,
+    site: 'https://pokedex-lumis-gules.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/pokedex-lumis'
   }
 ];
 

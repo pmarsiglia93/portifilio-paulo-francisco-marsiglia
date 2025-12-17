@@ -30,6 +30,7 @@ const Formacao = () => {
             <div className="cursos">
               <h3>Cursos intensivos</h3>
               <ul>
+                <li>Flash Skills: Web Apps Dinâmicos com Lovable | Alura  <span>10h</span></li>
                 <li>Node.js: criando uma API Rest com Express e MongoDB | Alura  <span>10h</span></li>
                 <li>HTML e CSS | Origamid  <span>46h</span></li>
                 <li>HTML e CSS: praticando HTML/CSS | Alura  <span>8h</span></li>

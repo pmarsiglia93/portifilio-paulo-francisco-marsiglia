@@ -17,7 +17,27 @@ const Experiencia = () => {
         </p>
 
         <div className="empresa">
-          <span className="empresa-ano">06/2025 – Atual</span>
+          <span className="empresa-ano">07/2025 - atual</span>
+          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
+          <span className="empresa-titulo">Desenvolvedor Front-end (Freelancer)</span>
+          <p className="empresa-texto">
+            Manutenção e evolução de plataforma web em Vue.js 2, com foco em refatoração de código,
+            remoção de estilos inline, criação de componentes reutilizáveis e melhorias de UX.
+            Atuação em telas de avaliações, pagamentos, modais, formulários e contratos em PDF,
+            garantindo responsividade e estabilidade em produção. Correção de bugs e alinhamento
+            com o time interno para padronização de código e qualidade das entregas.
+          </p>
+          <ul className="empresa-habilidades">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Vue.js 2</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+
+        <div className="empresa">
+          <span className="empresa-ano">06/2025 - 12/2025</span>
           <h3 className="empresa-titulo">Quality Digital</h3>
           <span className="empresa-titulo">Desenvolvedor Front-end</span>
           <p className="empresa-texto">
@@ -43,28 +63,6 @@ const Experiencia = () => {
             <li>Git</li>
           </ul>
         </div>
-
-        <div className="empresa">
-          <span className="empresa-ano">07/2025 - atual</span>
-          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
-          <span className="empresa-titulo">Desenvolvedor Front-end (Freelancer)</span>
-          <p className="empresa-texto">
-            Manutenção e evolução de plataforma web em Vue.js 2, com foco em refatoração de código,
-            remoção de estilos inline, criação de componentes reutilizáveis e melhorias de UX.
-            Atuação em telas de avaliações, pagamentos, modais, formulários e contratos em PDF,
-            garantindo responsividade e estabilidade em produção. Correção de bugs e alinhamento
-            com o time interno para padronização de código e qualidade das entregas.
-          </p>
-          <ul className="empresa-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Vue.js 2</li>
-            <li>PHP</li>
-          </ul>
-        </div>
-
-
 
         <div className="empresa">
           <span className="empresa-ano">09/2024 - 11/2024</span>
