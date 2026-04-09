@@ -29,6 +29,26 @@
     text-decoration: none;
     font-size: 1.125rem;
     color: black;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.desktop-menu a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #67dd0a;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: left;
+}
+
+.desktop-menu a:hover {
+    color: #67dd0a;
+}
+
+.desktop-menu a:hover::after {
+    transform: scaleX(1);
 }
 
 .menu-burger {
@@ -89,12 +109,12 @@
     }
 
     .logo {
-        order: 1; /* Move a logo para o lado direito */
+        order: 1;
     }
 
     .menu-burger {
         display: block;
-        order: 2; /* Mantém o menu à esquerda */
+        order: 2;
     }
 
     .desktop-menu {

@@ -8,6 +8,9 @@ import projeto4 from '../../assets/projeto4.png';
 import projeto5 from '../../assets/projeto5.png';
 import projeto6 from '../../assets/projeto6.png';
 import projeto7 from '../../assets/projeto7.png';
+import projeto8 from '../../assets/projeto8.png';
+import projeto9 from '../../assets/projeto9.png';
+import projeto10 from '../../assets/projeto10.png';
 
 const projetos = [
   {
@@ -85,6 +88,39 @@ const projetos = [
       'npm install',
       'npm run serve-api',
       'npm run dev',
+    ],
+  },
+  {
+    id: 8,
+    titulo: 'Starsoft Frontend Challenge',
+    descricao:
+      'E-commerce de itens de RPG desenvolvido com Next.js e TypeScript como desafio técnico da Starsoft. O projeto conta com listagem de produtos consumida via API, carrinho de compras com persistência no Redux, interface responsiva estilizada com SCSS e testes unitários com Jest.',
+    tecnologias: ['Next.js', 'React', 'TypeScript', 'SCSS', 'Redux', 'Jest'],
+    imagem: projeto8,
+    site: 'https://starsoft-frontend-challenge-lovat.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/starsoft-frontend-challenge',
+  },
+  {
+    id: 9,
+    titulo: 'LazerSP',
+    descricao:
+      'Aplicativo mobile de guia de lazer para São Paulo, com mais de 44 lugares cadastrados, geolocalização, favoritos, avaliações e suporte a 3 idiomas. Desenvolvido com React Native e Expo no front-end e Node.js + Express + SQLite no back-end, com containerização via Docker e 24 testes automatizados.',
+    tecnologias: ['React Native', 'Expo', 'Node.js', 'Express', 'SQLite', 'Docker'],
+    imagem: projeto9,
+    site: 'https://lazersp-landing.vercel.app/',
+    repositorio: 'https://github.com/pmarsiglia93/LazerSP',
+  },
+  {
+    id: 10,
+    titulo: 'Desafio Full Stack — Brasileirão',
+    descricao:
+      'Solução full stack para gerenciamento e visualização do Campeonato Brasileiro, com painel administrativo para criação de times, jogos e lançamento de placares. Back-end em PHP 8.4 com Laravel, autenticação via Laravel Sanctum e documentação com Swagger. Front-end em Next.js, React e TypeScript com Tailwind CSS. Toda a stack orquestrada via Docker Compose.',
+    tecnologias: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'PHP', 'Laravel', 'MySQL', 'Docker', 'Swagger'],
+    imagem: projeto10,
+    repositorio: 'https://github.com/pmarsiglia93/desafio-fullstack-brasileirao',
+    rodaLocal: true,
+    instrucoesLocal: [
+      'docker-compose up --build',
     ],
   },
 ];

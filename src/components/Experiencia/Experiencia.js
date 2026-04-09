@@ -8,12 +8,16 @@ const Experiencia = () => {
       <h2 className="subtitulo">Experiência</h2>
       <div>
         <p className="experiencia-texto">
-          Atuo como desenvolvedor front-end e full stack, criando interfaces dinâmicas e responsivas com  
-          <strong> React</strong>, <strong>Vue.js 2</strong>,<strong>Angular</strong>, <strong>Preact (Deco)</strong>, <strong>JavaScript</strong> e 
-          <strong> TypeScript</strong>, sempre com foco em performance, UX e layouts fiéis ao Figma. 
-          No back-end, tenho experiência com <strong>Node.js</strong> (APIs REST) e 
-          <strong> Java com Spring Boot</strong> para criação e manutenção de serviços, integrações e regras de negócio, 
-          conectando front-end e back-end de forma consistente em aplicações web e plataformas de e-commerce.
+          Desenvolvedor Full Stack com quase 4 anos de experiência, especializado em <strong>React</strong>, <strong>Vue.js</strong> e <strong>Angular</strong> com <strong>TypeScript</strong>, criação de interfaces responsivas e performáticas com fidelidade ao Figma, integração com <strong>APIs REST</strong> e <strong>GraphQL</strong> e desenvolvimento de componentes reutilizáveis seguindo Clean Code e SOLID.
+        </p>
+        <p className="experiencia-texto">
+          No e-commerce, tenho experiência sólida com <strong>VTEX IO</strong> e <strong>Deco.cx</strong> (Preact + Tailwind), tendo atuado em mais de 30 lojas de grandes marcas como Electrolux, Aramis e Bibi Calçados. No back-end, trabalho com <strong>Node.js</strong> (Express e NestJS), <strong>PHP</strong> (Laravel) e <strong>Python</strong> (Django) para construção de APIs REST, autenticação JWT e integração com serviços externos.
+        </p>
+        <p className="experiencia-texto">
+          Já integrei modelos de IA em produção — incluindo a <strong>API do ChatGPT</strong> — em uma plataforma SaaS que gerou <strong>R$ 4,8 milhões em receita nas primeiras 24 horas</strong>. Utilizo ferramentas de <strong>AI-Assisted Development</strong> como Claude, GitHub Copilot e Cursor no dia a dia para acelerar entregas sem abrir mão de qualidade e arquitetura.
+        </p>
+        <p className="experiencia-texto">
+          MBA em <strong>Engenharia de Software</strong> pela <strong>USP/ESALQ</strong> em andamento.
         </p>
 
         <div className="empresa">

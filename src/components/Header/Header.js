@@ -13,6 +13,7 @@ const Header = () => {
       {/* Menu Desktop */}
       <nav className="desktop-menu">
         <ul>
+          <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#formacao">Formação</a></li>
           <li><a href="#projetos">Projetos</a></li>
@@ -38,6 +39,7 @@ const Header = () => {
             <button className="menu-close" onClick={() => setMenuOpen(false)}>×</button>
             <nav>
               <ul>
+                <li><a href="#habilidades" onClick={() => setMenuOpen(false)}>Habilidades</a></li>
                 <li><a href="#experiencia" onClick={() => setMenuOpen(false)}>Experiência</a></li>
                 <li><a href="#formacao" onClick={() => setMenuOpen(false)}>Formação</a></li>
                 <li><a href="#projetos" onClick={() => setMenuOpen(false)}>Projetos</a></li>

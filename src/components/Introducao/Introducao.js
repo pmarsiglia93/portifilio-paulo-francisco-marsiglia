@@ -8,7 +8,7 @@ const Introducao = () => {
     <main className="container introducao">
       <img src={paulo} alt="Lobo Cinza" />
       <div>
-        <h1>Desenvolvedor<br />Front End <br /></h1>
+        <h1>Desenvolvedor<br />Full Stack <br /></h1>
         <p>Localizado em São Paulo</p>
       </div>
     </main>

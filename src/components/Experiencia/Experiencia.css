@@ -40,14 +40,9 @@
 }
 
 .empresa-ano {
-    position: absolute;
-    top: 22px;
-    left: -125px;
+    grid-column: 1 / -1;
     color: #525252;
     font-size: 0.875rem;
-    width: 80px;
-    text-align: right;
-    white-space: nowrap
 }
 
 .empresa-titulo {
@@ -87,12 +82,6 @@
     }
     .experiencia-texto {
         font-size: 1.25rem;
-    }
-    .empresa-ano {
-        position: initial;
-        order: 1;
-        width: initial;
-        text-align: left;
     }
 }
 
