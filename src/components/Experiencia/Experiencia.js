@@ -23,20 +23,24 @@ const Experiencia = () => {
         <div className="empresa">
           <span className="empresa-ano">07/2025 - atual</span>
           <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
-          <span className="empresa-titulo">Desenvolvedor Front-end (Freelancer)</span>
+          <span className="empresa-titulo">Desenvolvedor Full Stack</span>
           <p className="empresa-texto">
-            Manutenção e evolução de plataforma web em Vue.js 2, com foco em refatoração de código,
-            remoção de estilos inline, criação de componentes reutilizáveis e melhorias de UX.
-            Atuação em telas de avaliações, pagamentos, modais, formulários e contratos em PDF,
-            garantindo responsividade e estabilidade em produção. Correção de bugs e alinhamento
-            com o time interno para padronização de código e qualidade das entregas.
+            Atuação full stack na evolução de plataforma educacional com Vue.js 2/3 e TypeScript no
+            front-end, e PHP/Laravel no back-end. Refatoração de componentes legados, migração de estilos
+            inline para Tailwind CSS e criação de componentes reutilizáveis com Vuex/Pinia. Desenvolvimento
+            de telas críticas — avaliações, pagamentos, contratos em PDF e formulários — com foco em UX,
+            responsividade e estabilidade em produção. Integração com APIs REST, adoção de Gitflow e
+            alinhamento contínuo com o time via Scrum.
           </p>
           <ul className="empresa-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Vue.js 2</li>
-            <li>PHP</li>
+            <li>Vue.js 2/3</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+            <li>PHP/Laravel</li>
+            <li>APIs REST</li>
+            <li>Vuex/Pinia</li>
+            <li>Gitflow</li>
+            <li>Scrum</li>
           </ul>
         </div>
 
@@ -45,58 +49,74 @@ const Experiencia = () => {
           <h3 className="empresa-titulo">Quality Digital</h3>
           <span className="empresa-titulo">Desenvolvedor Front-end</span>
           <p className="empresa-texto">
-            Desenvolvimento de sections, componentes modulares e landing pages para Electrolux,
-            Frigidaire e marcas Latam, utilizando Deco (Preact + Tailwind) e VTEX IO (React).
-            Implementação de layouts pixel-perfect a partir do Figma, garantindo responsividade,
-            consistência visual e manutenção via CMS. Integração com APIs REST, criação de componentes
-            configuráveis e suporte a múltiplos idiomas e domínios. Atuação em fluxo de desenvolvimento
-            com branches dedicadas (feature/fix/release), atualização de CHANGELOG, abertura de PRs
-            revisados e alinhamento constante com PO e QA.
+            Desenvolvimento de seções, componentes modulares e landing pages para marcas como Electrolux
+            e Frigidaire (LATAM), utilizando Deco.cx (Preact + Tailwind CSS) e VTEX IO (React + TypeScript).
+            Implementação de layouts pixel-perfect a partir do Figma com suporte a múltiplos idiomas e domínios,
+            resultando em melhora significativa de performance e consistência visual. Integração com APIs REST e
+            GraphQL, criação de componentes configuráveis via CMS e fluxo profissional com branches
+            feature/fix/release, CHANGELOG, PRs com code review e alinhamento contínuo com PO e QA.
           </p>
           <ul className="empresa-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
             <li>React</li>
+            <li>TypeScript</li>
             <li>Preact</li>
             <li>Tailwind CSS</li>
             <li>VTEX IO</li>
-            <li>Deco</li>
+            <li>Deco.cx</li>
+            <li>GraphQL</li>
             <li>APIs REST</li>
             <li>Figma</li>
-            <li>Git</li>
+            <li>Gitflow</li>
           </ul>
         </div>
 
         <div className="empresa">
           <span className="empresa-ano">09/2024 - 11/2024</span>
           <h3 className="empresa-titulo">Stalse Analytics</h3>
-          <span className="empresa-titulo">Desenvolvedor Front-end</span>
-          <p className="empresa-texto">Desenvolvi soluções com Inteligência Artificial, como um chat interativo baseado no ChatGPT, utilizando Django, APIs, bancos de dados relacionais e tecnologias front-end como HTML, CSS e JavaScript para otimizar a experiência do usuário.</p>
+          <span className="empresa-titulo">Desenvolvedor Full Stack</span>
+          <p className="empresa-texto">
+            Desenvolvimento full stack completo, do zero, de uma plataforma SaaS de Business Intelligence
+            com IA integrada. Front-end em React + TypeScript com dashboards interativos; back-end em
+            Python/Django com Node.js para APIs REST, autenticação JWT e integração com a API do ChatGPT,
+            resultando em um chat interativo de análise de dados. Banco de dados PostgreSQL com modelagem
+            relacional e deploy em produção. A plataforma gerou <strong>R$ 4,8 milhões em receita nas
+            primeiras 24 horas</strong> após o lançamento.
+          </p>
           <ul className="empresa-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>APIs</li>
-            <li>MySQL</li>            
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Python/Django</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
+            <li>APIs REST</li>
+            <li>ChatGPT API</li>
+            <li>JWT</li>
+            <li>Git</li>
           </ul>
         </div>
 
         <div className="empresa">
-          <span className="empresa-ano">05/2022 - 07-2024</span>
+          <span className="empresa-ano">05/2022 - 07/2024</span>
           <h3 className="empresa-titulo">Corebiz</h3>
           <span className="empresa-titulo">Desenvolvedor Front-end</span>
-          <p className="empresa-texto">Desenvolvi soluções para e-commerce utilizando VTEX IO e VTEX Legacy, criando componentes reutilizáveis e escaláveis com React, JavaScript e TypeScript. Também implementei integrações com REST APIs e GraphQL, além de desenvolver landing pages focadas em usabilidade e conversão.</p>
+          <p className="empresa-texto">
+            2 anos e 3 meses de atuação em desenvolvimento front-end para e-commerce com VTEX IO e
+            VTEX Legacy, atendendo mais de 30 clientes de grandes marcas como Electrolux, Aramis,
+            Bibi Calçados e NK Store. Criação de componentes reutilizáveis e escaláveis com React,
+            TypeScript e Styled-Components, com melhora de 40% na escalabilidade e 35% na performance
+            das lojas. Integrações com APIs REST e GraphQL, landing pages orientadas à conversão e
+            trabalho em squads ágeis com code reviews, Gitflow e Scrum.
+          </p>
           <ul className="empresa-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Typescript</li>
             <li>React</li>
-            <li>APIs</li>
-            <li>GraphQL</li>
+            <li>TypeScript</li>
             <li>VTEX IO</li>
-            <li>VTEX Legacy</li>            
+            <li>VTEX Legacy</li>
+            <li>GraphQL</li>
+            <li>APIs REST</li>
+            <li>Styled-Components</li>
+            <li>Gitflow</li>
+            <li>Scrum</li>
           </ul>
         </div>
 
