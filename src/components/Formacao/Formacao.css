@@ -6,8 +6,8 @@
 .formacao-container {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
-    gap: clamp(3rem, 7vw, 6rem);
+    grid-template-columns: var(--colunas-secao);
+    gap: var(--gap-secao);
     max-width: var(--largura-container);
     margin: 0 auto;
     padding: var(--espaco-secao) 24px;

@@ -20,41 +20,52 @@ const Experiencia = () => {
           MBA em <strong>Engenharia de Software</strong> pela <strong>USP/ESALQ</strong> em andamento.
         </p>
 
-        <div className="empresa">
-          <span className="empresa-ano">07/2026 - atual</span>
-          <h3 className="empresa-titulo">CervejaBox</h3>
-          <span className="empresa-cargo">Desenvolvedor Front-end Freelance</span>
-          <p className="empresa-texto">
-            Atuo como freelancer via MEI na manutenção e em correções de uma loja de e-commerce VTEX
-            com CMS legado em produção. Corrigi a responsividade mobile e um bug no formulário de
-            cadastro, além de reorganizar o menu e o catálogo. Organizo as entregas por etapas em um
-            ambiente de homologação isolado, para que o cliente valide cada mudança antes da publicação
-            em produção.
-          </p>
-          <ul className="empresa-habilidades">
-            <li>VTEX</li>
-            <li>CMS legado</li>
-            <li>E-commerce</li>
-            <li>Responsividade</li>
-            <li>Homologação</li>
-          </ul>
-        </div>
+        <div className="empresa empresa--autonomo">
+          <span className="empresa-ano">07/2025 - atual</span>
+          <h3 className="empresa-titulo">Autônomo</h3>
+          <span className="empresa-cargo">Desenvolvedor Full Stack | Freelancer (PJ)</span>
+          <div className="empresa-detalhes">
+            <p className="empresa-texto">
+              Atuo como desenvolvedor full stack autônomo via MEI, prestando serviços de desenvolvimento
+              e manutenção de software para clientes de diferentes segmentos.
+            </p>
 
-        <div className="empresa">
-          <span className="empresa-ano">07/2025 - 07/2026</span>
-          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
-          <span className="empresa-cargo">Desenvolvedor Full Stack PJ</span>
-          <p className="empresa-texto">
-            Prestei serviço via MEI em uma codebase legada migrada de Vue 2 para Vue 3. Atuei com
-            clientes internacionais, recebendo demandas por meio do PO e participando de reuniões
-            adaptadas ao fuso horário compartilhado. O contrato PJ foi encerrado em julho de 2026.
-          </p>
+            <div className="projeto-autonomo">
+              <div className="projeto-autonomo-cabecalho">
+                <strong>EAC Personnalité / Barkeley School</strong>
+                <span>07/2025 - 07/2026</span>
+              </div>
+              <p>
+                Prestei serviço em uma codebase legada migrada de Vue 2 para Vue 3. Atuei com clientes
+                internacionais, recebendo demandas por meio do PO e participando de reuniões adaptadas
+                ao fuso horário compartilhado.
+              </p>
+            </div>
+
+            <div className="projeto-autonomo">
+              <div className="projeto-autonomo-cabecalho">
+                <strong>CervejaBox</strong>
+                <span>07/2026 - atual</span>
+              </div>
+              <p>
+                Atuo na manutenção e em correções de uma loja de e-commerce VTEX com CMS legado em
+                produção. Corrigi a responsividade mobile e um bug no formulário de cadastro, além de
+                reorganizar o menu e o catálogo. Organizo as entregas por etapas em um ambiente de
+                homologação isolado, para validação do cliente antes da publicação em produção.
+              </p>
+            </div>
+          </div>
           <ul className="empresa-habilidades">
             <li>Vue.js 2/3</li>
-            <li>Codebase legado</li>
-            <li>Clientes internacionais</li>
-            <li>Trabalho remoto</li>
-            <li>MEI</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>MySQL</li>
+            <li>VTEX</li>
+            <li>Node.js</li>
+            <li>APIs REST</li>
+            <li>JWT</li>
           </ul>
         </div>
 

@@ -12,9 +12,9 @@
 
 .projetos-cabecalho {
     display: grid;
-    grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
+    grid-template-columns: var(--colunas-secao);
     align-items: end;
-    gap: clamp(3rem, 7vw, 6rem);
+    gap: var(--gap-secao);
     margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 

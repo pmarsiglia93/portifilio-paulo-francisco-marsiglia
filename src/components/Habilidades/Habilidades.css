@@ -6,9 +6,9 @@
 
 .habilidades-container {
     display: grid;
-    grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
+    grid-template-columns: var(--colunas-secao);
     align-items: start;
-    gap: clamp(3rem, 7vw, 6rem);
+    gap: var(--gap-secao);
     width: 100%;
     max-width: var(--largura-container);
     margin: 0 auto;
@@ -20,128 +20,62 @@
     color: #ddddda;
 }
 
-.habilidades-grupos {
-    display: grid;
-    gap: 16px;
-}
-
-.habilidades-grupo {
+.habilidades-conteudo {
     position: relative;
-    padding: 24px;
+    padding: clamp(24px, 4vw, 36px);
     border: 1px solid transparent;
     border-radius: var(--raio-medio);
     background-color: var(--cor-fundo-suave);
     transition: border-color var(--transicao), box-shadow var(--transicao), transform var(--transicao);
 }
 
-.habilidades-grupo:hover {
+.habilidades-conteudo:hover {
     border-color: var(--cor-borda);
     box-shadow: var(--sombra-card);
     transform: translateY(-3px);
 }
 
-.habilidades-grupo::before {
+.habilidades-conteudo::before {
     position: absolute;
-    top: 25px;
+    top: 36px;
     left: -3px;
-    display: block;
     width: 5px;
-    height: 24px;
+    height: 28px;
     border-radius: 999px;
+    background: var(--gradiente-destaque);
     content: "";
 }
 
-.habilidades-grupo--avancado::before,
-.habilidades-grupo--ia::before {
-    background: var(--gradiente-destaque);
-}
-
-.habilidades-grupo--intermediario::before {
-    background-color: var(--cor-texto-suave);
-}
-
-.habilidades-grupo--basico::before {
-    background-color: #b0b0b0;
-}
-
-.habilidades-grupo-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-.habilidades-nivel-badge {
-    padding: 5px 10px;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.habilidades-nivel-badge--avancado {
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
-}
-
-.habilidades-nivel-badge--intermediario {
-    background-color: var(--cor-texto-suave);
-    color: var(--cor-fundo);
-}
-
-.habilidades-nivel-badge--basico {
-    background-color: #d4d4d4;
-    color: var(--cor-texto);
-}
-
-.habilidades-nivel-badge--ia {
-    background: var(--gradiente-destaque);
-    color: var(--cor-texto);
-}
-
-.habilidades-descricao {
+.habilidades-introducao {
+    max-width: 48ch;
+    margin-bottom: 28px;
     color: var(--cor-texto-suave);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.55;
 }
 
-.habilidades-tags {
+.habilidades-lista {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 9px;
 }
 
-.habilidades-tag {
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    line-height: 1.35;
-}
-
-.habilidades-tag--avancado {
-    background-color: var(--cor-texto);
-    color: var(--cor-fundo);
-}
-
-.habilidades-tag--intermediario,
-.habilidades-tag--basico {
+.habilidades-lista li {
+    padding: 8px 12px;
     border: 1px solid var(--cor-borda);
+    border-radius: 999px;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    font-size: 0.84rem;
+    font-weight: 650;
+    line-height: 1.3;
+    transition: border-color var(--transicao), background-color var(--transicao), transform var(--transicao);
 }
 
-.habilidades-tag--basico {
-    color: var(--cor-texto-suave);
-}
-
-.habilidades-tag--ia {
-    border: 1px solid #a8dc79;
+.habilidades-lista li:hover {
+    border-color: #a8dc79;
     background-color: #f0ffdf;
-    color: var(--cor-texto);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 800px) {

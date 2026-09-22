@@ -82,6 +82,47 @@
     line-height: 1.6;
 }
 
+.empresa-detalhes {
+    display: grid;
+    gap: 16px;
+}
+
+.projeto-autonomo {
+    padding: 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-fundo);
+}
+
+.projeto-autonomo-cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-bottom: 9px;
+}
+
+.projeto-autonomo-cabecalho strong {
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.projeto-autonomo-cabecalho span {
+    color: var(--cor-texto-suave);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.projeto-autonomo p {
+    color: var(--cor-texto-suave);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
 .empresa-habilidades {
     display: flex;
     flex-wrap: wrap;

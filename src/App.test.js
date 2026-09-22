@@ -11,8 +11,9 @@ describe('portfólio', () => {
     expect(screen.getByRole('heading', { name: 'JobMatch AI, Recomendação Inteligente de Vagas no Telegram' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Bank API, Simulação de Banco Digital' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Prothera Iniflex, Gestão de Funcionários' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'CervejaBox' })).toBeInTheDocument();
-    expect(screen.getByText('07/2025 - 07/2026')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Autônomo' })).toBeInTheDocument();
+    expect(screen.getByText('CervejaBox')).toBeInTheDocument();
+    expect(screen.getByText('EAC Personnalité / Barkeley School')).toBeInTheDocument();
   });
 
   test('abre os detalhes de um projeto com destaques e link real', () => {
