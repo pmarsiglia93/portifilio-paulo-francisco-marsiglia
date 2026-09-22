@@ -1,115 +1,113 @@
-/* src/components/Habilidades/Habilidades.css */
-
 .habilidades {
-    background-color: #ffffff;
     width: 100%;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
+    padding: var(--espaco-secao) 24px;
+    background-color: var(--cor-fundo);
 }
 
 .habilidades-container {
-    max-width: 1200px;
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr);
     align-items: start;
-    gap: 50px;
+    gap: clamp(3rem, 7vw, 6rem);
+    width: 100%;
+    max-width: var(--largura-container);
+    margin: 0 auto;
 }
 
 .habilidades .subtitulo {
-    color: #e0e0e0;
     position: sticky;
-    top: 30px;
+    top: 130px;
+    color: #ddddda;
 }
 
 .habilidades-grupos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    gap: 16px;
 }
 
-/* Card de cada nível */
 .habilidades-grupo {
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    padding: 20px;
     position: relative;
+    padding: 24px;
+    border: 1px solid transparent;
+    border-radius: var(--raio-medio);
+    background-color: var(--cor-fundo-suave);
+    transition: border-color var(--transicao), box-shadow var(--transicao), transform var(--transicao);
+}
+
+.habilidades-grupo:hover {
+    border-color: var(--cor-borda);
+    box-shadow: var(--sombra-card);
+    transform: translateY(-3px);
 }
 
 .habilidades-grupo::before {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 20px;
     position: absolute;
-    top: 20px;
-    left: -4px;
-    border-radius: 2px 0 0 2px;
+    top: 25px;
+    left: -3px;
+    display: block;
+    width: 5px;
+    height: 24px;
+    border-radius: 999px;
+    content: "";
 }
 
-.habilidades-grupo--avancado::before {
-    background-image: linear-gradient(#b6f829, #67dd0a);
+.habilidades-grupo--avancado::before,
+.habilidades-grupo--ia::before {
+    background: var(--gradiente-destaque);
 }
 
 .habilidades-grupo--intermediario::before {
-    background-color: #525252;
+    background-color: var(--cor-texto-suave);
 }
 
 .habilidades-grupo--basico::before {
     background-color: #b0b0b0;
 }
 
-.habilidades-grupo--ia::before {
-    background-image: linear-gradient(#b6f829, #67dd0a);
-}
-
-/* Header do grupo */
 .habilidades-grupo-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 12px;
-    margin-bottom: 14px;
-    flex-wrap: wrap;
+    margin-bottom: 18px;
 }
 
 .habilidades-nivel-badge {
-    font-size: 0.75rem;
-    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 3px 10px;
-    border-radius: 4px;
     white-space: nowrap;
 }
 
 .habilidades-nivel-badge--avancado {
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
 }
 
 .habilidades-nivel-badge--intermediario {
-    background-color: #525252;
-    color: #ffffff;
+    background-color: var(--cor-texto-suave);
+    color: var(--cor-fundo);
 }
 
 .habilidades-nivel-badge--basico {
     background-color: #d4d4d4;
-    color: #141414;
+    color: var(--cor-texto);
 }
 
 .habilidades-nivel-badge--ia {
-    background-image: linear-gradient(90deg, #b6f829, #67dd0a);
-    color: #141414;
+    background: var(--gradiente-destaque);
+    color: var(--cor-texto);
 }
 
 .habilidades-descricao {
-    font-size: 0.875rem;
-    color: #525252;
-    line-height: 1.4;
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* Tags */
 .habilidades-tags {
     display: flex;
     flex-wrap: wrap;
@@ -117,47 +115,47 @@
 }
 
 .habilidades-tag {
-    font-size: 0.875rem;
-    padding: 5px 10px;
-    border-radius: 4px;
-    line-height: 1.4;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 .habilidades-tag--avancado {
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
 }
 
-.habilidades-tag--intermediario {
-    background-color: #ffffff;
-    color: #141414;
-    border: 1px solid #525252;
+.habilidades-tag--intermediario,
+.habilidades-tag--basico {
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
 .habilidades-tag--basico {
-    background-color: #ffffff;
-    color: #525252;
-    border: 1px solid #d4d4d4;
+    color: var(--cor-texto-suave);
 }
 
 .habilidades-tag--ia {
-    background-color: #f0ffd6;
-    color: #141414;
-    border: 1px solid #b6f829;
+    border: 1px solid #a8dc79;
+    background-color: #f0ffdf;
+    color: var(--cor-texto);
 }
 
 @media (max-width: 800px) {
-    .habilidades-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .habilidades {
+        padding: clamp(3.5rem, 12vw, 5rem) 20px;
     }
 
-    .habilidades {
-        padding: 60px 20px;
+    .habilidades-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
     }
 
     .habilidades .subtitulo {
-        color: #141414;
         position: static;
+        color: var(--cor-texto);
     }
 }

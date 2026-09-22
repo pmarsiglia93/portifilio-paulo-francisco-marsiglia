@@ -14,40 +14,54 @@ const Experiencia = () => {
           No e-commerce, tenho experiência sólida com <strong>VTEX IO</strong> e <strong>Deco.cx</strong> (Preact + Tailwind), tendo atuado em mais de 30 lojas de grandes marcas como Electrolux, Aramis e Bibi Calçados. No back-end, trabalho com <strong>Node.js</strong> (Express e NestJS), <strong>PHP</strong> (Laravel) e <strong>Python</strong> (Django) para construção de APIs REST, autenticação JWT e integração com serviços externos.
         </p>
         <p className="experiencia-texto">
-          Já integrei modelos de IA em produção — incluindo a <strong>API do ChatGPT</strong> — em uma plataforma SaaS que gerou <strong>R$ 4,8 milhões em receita nas primeiras 24 horas</strong>. Utilizo ferramentas de <strong>AI-Assisted Development</strong> como Claude, GitHub Copilot e Cursor no dia a dia para acelerar entregas sem abrir mão de qualidade e arquitetura.
+          Já integrei modelos de IA em produção, incluindo a <strong>API do ChatGPT</strong>, em uma plataforma SaaS que gerou <strong>R$ 4,8 milhões em receita nas primeiras 24 horas</strong>. Utilizo ferramentas de <strong>AI-Assisted Development</strong> como Claude, GitHub Copilot e Cursor no dia a dia para acelerar entregas sem abrir mão de qualidade e arquitetura.
         </p>
         <p className="experiencia-texto">
           MBA em <strong>Engenharia de Software</strong> pela <strong>USP/ESALQ</strong> em andamento.
         </p>
 
         <div className="empresa">
-          <span className="empresa-ano">07/2025 - atual</span>
-          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
-          <span className="empresa-titulo">Desenvolvedor Full Stack</span>
+          <span className="empresa-ano">07/2026 - atual</span>
+          <h3 className="empresa-titulo">CervejaBox</h3>
+          <span className="empresa-cargo">Desenvolvedor Front-end Freelance</span>
           <p className="empresa-texto">
-            Atuação full stack na evolução de plataforma educacional com Vue.js 2/3 e TypeScript no
-            front-end, e PHP/Laravel no back-end. Refatoração de componentes legados, migração de estilos
-            inline para Tailwind CSS e criação de componentes reutilizáveis com Vuex/Pinia. Desenvolvimento
-            de telas críticas — avaliações, pagamentos, contratos em PDF e formulários — com foco em UX,
-            responsividade e estabilidade em produção. Integração com APIs REST, adoção de Gitflow e
-            alinhamento contínuo com o time via Scrum.
+            Atuo como freelancer via MEI na manutenção e em correções de uma loja de e-commerce VTEX
+            com CMS legado em produção. Corrigi a responsividade mobile e um bug no formulário de
+            cadastro, além de reorganizar o menu e o catálogo. Organizo as entregas por etapas em um
+            ambiente de homologação isolado, para que o cliente valide cada mudança antes da publicação
+            em produção.
+          </p>
+          <ul className="empresa-habilidades">
+            <li>VTEX</li>
+            <li>CMS legado</li>
+            <li>E-commerce</li>
+            <li>Responsividade</li>
+            <li>Homologação</li>
+          </ul>
+        </div>
+
+        <div className="empresa">
+          <span className="empresa-ano">07/2025 - 07/2026</span>
+          <h3 className="empresa-titulo">EAC Personnalité / Barkeley School</h3>
+          <span className="empresa-cargo">Desenvolvedor Full Stack PJ</span>
+          <p className="empresa-texto">
+            Prestei serviço via MEI em uma codebase legada migrada de Vue 2 para Vue 3. Atuei com
+            clientes internacionais, recebendo demandas por meio do PO e participando de reuniões
+            adaptadas ao fuso horário compartilhado. O contrato PJ foi encerrado em julho de 2026.
           </p>
           <ul className="empresa-habilidades">
             <li>Vue.js 2/3</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
-            <li>PHP/Laravel</li>
-            <li>APIs REST</li>
-            <li>Vuex/Pinia</li>
-            <li>Gitflow</li>
-            <li>Scrum</li>
+            <li>Codebase legado</li>
+            <li>Clientes internacionais</li>
+            <li>Trabalho remoto</li>
+            <li>MEI</li>
           </ul>
         </div>
 
         <div className="empresa">
           <span className="empresa-ano">06/2025 - 12/2025</span>
           <h3 className="empresa-titulo">Quality Digital</h3>
-          <span className="empresa-titulo">Desenvolvedor Front-end</span>
+          <span className="empresa-cargo">Desenvolvedor Front-end</span>
           <p className="empresa-texto">
             Desenvolvimento de seções, componentes modulares e landing pages para marcas como Electrolux
             e Frigidaire (LATAM), utilizando Deco.cx (Preact + Tailwind CSS) e VTEX IO (React + TypeScript).
@@ -73,7 +87,7 @@ const Experiencia = () => {
         <div className="empresa">
           <span className="empresa-ano">09/2024 - 11/2024</span>
           <h3 className="empresa-titulo">Stalse Analytics</h3>
-          <span className="empresa-titulo">Desenvolvedor Full Stack</span>
+          <span className="empresa-cargo">Desenvolvedor Full Stack</span>
           <p className="empresa-texto">
             Desenvolvimento full stack completo, do zero, de uma plataforma SaaS de Business Intelligence
             com IA integrada. Front-end em React + TypeScript com dashboards interativos; back-end em
@@ -98,7 +112,7 @@ const Experiencia = () => {
         <div className="empresa">
           <span className="empresa-ano">05/2022 - 07/2024</span>
           <h3 className="empresa-titulo">Corebiz</h3>
-          <span className="empresa-titulo">Desenvolvedor Front-end</span>
+          <span className="empresa-cargo">Desenvolvedor Front-end</span>
           <p className="empresa-texto">
             2 anos e 3 meses de atuação em desenvolvimento front-end para e-commerce com VTEX IO e
             VTEX Legacy, atendendo mais de 30 clientes de grandes marcas como Electrolux, Aramis,
@@ -123,7 +137,7 @@ const Experiencia = () => {
         <div className="empresa">
           <span className="empresa-ano">06/2016 - 12/2016</span>
           <h3 className="empresa-titulo">Empresa Júnior de Lazer e Turismo</h3>
-          <span className="empresa-titulo">Voluntário</span>
+          <span className="empresa-cargo">Voluntário</span>
           <p className="empresa-texto">Organizei eventos acadêmicos na Empresa Júnior de Lazer e Turismo da USP, gerenciando palestras, coffee breaks e atualizando redes sociais como Facebook e Instagram. Atuei como staff em eventos e elaborei relatórios semanais com a equipe.</p>
           <ul className="empresa-habilidades">
             <li>Gestão de Eventos</li>

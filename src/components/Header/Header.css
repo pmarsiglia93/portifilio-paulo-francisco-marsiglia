@@ -1,123 +1,158 @@
-/* src/components/Header/Header.css */
-
 .header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    position: sticky;
+    top: 16px;
+    z-index: 900;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    max-width: calc(var(--largura-container) - 16px);
+    margin: 16px auto 0;
+    padding: 14px 18px;
+    border: 1px solid rgba(20, 20, 20, 0.08);
+    border-radius: var(--raio-medio);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 30px rgba(20, 20, 20, 0.06);
+    backdrop-filter: blur(16px);
 }
 
 .logo {
-    font-family: 'Arial', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
+    color: var(--cor-texto);
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: black;
+}
+
+.logo::after {
+    color: var(--cor-destaque);
+    content: ".";
 }
 
 .desktop-menu ul {
     display: flex;
-    list-style: none;
-    gap: 20px;
-    padding: 0;
+    align-items: center;
+    gap: 6px;
 }
 
 .desktop-menu a {
-    text-decoration: none;
-    font-size: 1.125rem;
-    color: black;
-    transition: color 0.2s ease;
     position: relative;
-}
-
-.desktop-menu a::after {
-    content: "";
     display: block;
-    height: 2px;
-    background-color: #67dd0a;
-    transform: scaleX(0);
-    transition: transform 0.2s ease;
-    transform-origin: left;
+    padding: 9px 12px;
+    border-radius: var(--raio-pequeno);
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color var(--transicao), color var(--transicao);
 }
 
 .desktop-menu a:hover {
-    color: #67dd0a;
+    background-color: var(--cor-fundo-suave);
+    color: var(--cor-texto);
 }
 
-.desktop-menu a:hover::after {
+.desktop-menu a::after {
+    position: absolute;
+    right: 12px;
+    bottom: 4px;
+    left: 12px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--gradiente-destaque);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transicao);
+}
+
+.desktop-menu a:hover::after,
+.desktop-menu a:focus-visible::after {
     transform: scaleX(1);
+}
+
+.menu-burger,
+.menu-close {
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
 }
 
 .menu-burger {
     display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    font-size: 1.35rem;
 }
 
 .mobile-menu {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    color: white;
+    inset: 0;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background: var(--cor-preto);
+    color: var(--cor-fundo);
     text-align: center;
-    z-index: 1000;
 }
 
 .menu-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #242424;
+    color: var(--cor-fundo);
     font-size: 2rem;
-    color: white;
-    cursor: pointer;
+    transition: background-color var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.menu-close:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-preto);
+    transform: rotate(4deg);
 }
 
 .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.mobile-menu li {
-    margin: 20px 0;
+    display: grid;
+    gap: 10px;
 }
 
 .mobile-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
+    display: block;
+    padding: 10px 20px;
+    font-size: clamp(1.75rem, 8vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    transition: color var(--transicao), transform var(--transicao);
+}
+
+.mobile-menu a:hover {
+    color: var(--cor-destaque);
+    transform: translateX(4px);
 }
 
 @media (max-width: 800px) {
     .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .logo {
-        order: 1;
-    }
-
-    .menu-burger {
-        display: block;
-        order: 2;
+        top: 10px;
+        width: calc(100% - 20px);
+        margin-top: 10px;
+        padding: 10px 12px 10px 16px;
     }
 
     .desktop-menu {
         display: none;
+    }
+
+    .menu-burger {
+        display: flex;
     }
 }

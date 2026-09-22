@@ -1,35 +1,38 @@
-/* src/components/ScrollToTop/ScrollToTop.css */
-
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    background-color: #FF9900;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    bottom: 20px;
+    z-index: 800;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background-color: var(--cor-texto);
+    box-shadow: 0 10px 28px rgba(20, 20, 20, 0.2);
+    color: var(--cor-fundo);
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out, transform 0.3s;
     opacity: 0;
-    transform: scale(0.8);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    transform: translateY(10px) scale(0.9);
+    transition: background-color var(--transicao), color var(--transicao), opacity var(--transicao), transform var(--transicao);
 }
 
 .scroll-to-top.visible {
     opacity: 1;
-    transform: scale(1);
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
 }
 
 .scroll-to-top:hover {
-    background-color: #67dd0a;
+    background-color: var(--cor-destaque);
+    color: var(--cor-preto);
+    transform: translateY(-3px);
 }
 
 .scroll-to-top svg {
-    width: 24px;
-    height: 24px;
+    width: 19px;
+    height: 19px;
 }

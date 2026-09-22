@@ -1,5 +1,5 @@
 // src/components/Projetos/Projetos.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Projetos.css';
 import projeto1 from '../../assets/projeto1.png';
 import projeto2 from '../../assets/projeto2.png';
@@ -13,6 +13,108 @@ import projeto9 from '../../assets/projeto9.png';
 import projeto10 from '../../assets/projeto10.png';
 
 const projetos = [
+  {
+    id: 11,
+    titulo: 'Zeeway, Painel de Demandas de Produto',
+    categoria: 'Aplicação Full Stack',
+    descricao:
+      'Aplicação web para registrar, priorizar e acompanhar demandas de produto. A prioridade é calculada no backend pela fórmula (impacto x 2) + urgência, evitando divergência entre frontend e backend.',
+    tecnologias: [
+      'Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS', 'Python 3.13',
+      'FastAPI', 'Pydantic', 'SQLAlchemy 2', 'SQLite',
+    ],
+    destaques: [
+      'Paginação e ordenação no servidor e busca textual.',
+      'Atualização otimista de status com reversão automática em caso de erro e histórico de status.',
+      'Ambiente com Docker Compose, documentação automática via Swagger/OpenAPI e testes de frontend e backend.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/case-zeeway',
+  },
+  {
+    id: 12,
+    titulo: 'Foody Delivery, Mini Rastreador de Pedidos',
+    categoria: 'Desafio Full Stack',
+    descricao:
+      'Desafio técnico para uma vaga de Desenvolvedor Full Stack Pleno. API REST com autenticação JWT e uma máquina de estados que valida cada mudança de status do pedido (RECEBIDO, EM_PREPARO, SAIU_PARA_ENTREGA, ENTREGUE, CANCELADO), com histórico completo de cada transição.',
+    tecnologias: [
+      'Java 21', 'Spring Boot 3.3.5', 'Spring Data JPA', 'Spring Security',
+      'JWT', 'SQLite', 'React 18', 'TypeScript', 'Vite', 'MUI v5', 'React Router v6',
+    ],
+    destaques: [
+      '43 testes automatizados com JUnit 5, Mockito e MockMvc.',
+      'Documentação Swagger UI e usuário de demonstração pronto para teste.',
+      'Regra de transição de status como fonte única de verdade consumida por backend, testes e frontend.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/case-foodydelivery',
+  },
+  {
+    id: 13,
+    titulo: 'Growth AI Challenge, Widget de Enriquecimento de Produto com IA',
+    categoria: 'IA e Automação',
+    descricao:
+      'Aplicação Next.js que recebe os dados de um produto e usa a API da Anthropic para gerar bullets de benefícios e perguntas frequentes, com o conteúdo chegando em streaming, palavra por palavra, na tela.',
+    tecnologias: [
+      'Next.js 16', 'React 18', 'TypeScript estrito', 'Tailwind CSS',
+      'Anthropic SDK', 'n8n',
+    ],
+    destaques: [
+      '74 testes automatizados e streaming real via NDJSON.',
+      'Cache em memória com invalidação ao regenerar conteúdo e suporte a PT e EN no mesmo widget.',
+      'Proposta documentada de integração do widget como app VTEX IO em produção e dois fluxos de automação em n8n, webhook e agendado.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/growth-ai-challenge',
+  },
+  {
+    id: 14,
+    titulo: 'JobMatch AI, Recomendação Inteligente de Vagas no Telegram',
+    categoria: 'IA e Automação',
+    descricao:
+      'Evolução de um bot de vagas que coleta oportunidades de tecnologia, lê os requisitos de cada uma, compara com um perfil profissional estruturado usando RAG e LLM e envia as melhores oportunidades no Telegram, ordenadas por aderência.',
+    tecnologias: [
+      'Python 3.11+', 'RAG', 'LLMs', 'SQLite', 'ChromaDB',
+      'Telegram', 'GitHub Actions', 'pytest',
+    ],
+    destaques: [
+      'Coleta vagas da Gupy, LinkedIn e ProgramaThor, com normalização e deduplicação por URL e fingerprint.',
+      'Pipeline resiliente com score heurístico quando RAG, LLM ou banco vetorial não estão disponíveis.',
+      '169 testes automatizados, histórico em SQLite e automação com GitHub Actions.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/telegram-vagas-gupy-bot',
+  },
+  {
+    id: 15,
+    titulo: 'Bank API, Simulação de Banco Digital',
+    categoria: 'API GraphQL',
+    descricao:
+      'API de simulação de banco digital desenvolvida como desafio técnico. Permite criar contas, consultar saldo, realizar depósitos e saques, com persistência dos dados em MongoDB.',
+    tecnologias: [
+      'Node.js', 'GraphQL', 'Apollo Server Express', 'MongoDB',
+      'Mongoose', 'Docker Compose', 'Jest',
+    ],
+    destaques: [
+      'Operações de conta corrente expostas por uma API GraphQL.',
+      'Execução local com Node.js ou ambiente completo com Docker Compose.',
+      'Testes unitários com Jest para os fluxos principais e cobertura documentada acima de 85%.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/api-bank',
+  },
+  {
+    id: 16,
+    titulo: 'Prothera Iniflex, Gestão de Funcionários',
+    categoria: 'Desafio Java',
+    descricao:
+      'Aplicação Java para gerenciamento de funcionários, desenvolvida como solução de um teste técnico. O programa cadastra, remove, atualiza, agrupa e ordena funcionários, além de realizar cálculos sobre salários e idade.',
+    tecnologias: [
+      'Java 17', 'Maven', 'JUnit 5', 'Collections', 'Streams',
+      'LocalDate', 'Period', 'BigDecimal',
+    ],
+    destaques: [
+      'Datas e valores monetários formatados no padrão brasileiro e cálculos financeiros com BigDecimal.',
+      'Agrupamento por função, filtros de aniversário, cálculo de idade e ordenação alfabética.',
+      'Testes automatizados com JUnit 5 e execução gerenciada pelo Maven.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/prothera-iniflex',
+  },
   {
     id: 1,
     titulo: 'Bikcraft',
@@ -80,15 +182,10 @@ const projetos = [
       'Aplicação em Vue.js para registro, edição, visualização e exclusão de produtos, com navegação via Vue Router e persistência simulada com JSON Server.',
     tecnologias: ['Vue.js', 'Vue Router', 'JSON Server', 'CSS'],
     imagem: projeto7,
-    // Sem site publicado (depende do serve-api local)
-    // site: undefined,
-    repositorio: 'https://github.com/pmarsiglia93/vue-dashboard', 
+    repositorio: 'https://github.com/pmarsiglia93/vue-dashboard',
     rodaLocal: true,
-    instrucoesLocal: [
-      'npm install',
-      'npm run serve-api',
-      'npm run dev',
-    ],
+    avisoLocal: 'Este projeto não possui deploy público, pois depende de uma API local com JSON Server.',
+    instrucoesLocal: ['npm install', 'npm run serve-api', 'npm run dev'],
   },
   {
     id: 8,
@@ -112,127 +209,142 @@ const projetos = [
   },
   {
     id: 10,
-    titulo: 'Desafio Full Stack — Brasileirão',
+    titulo: 'Desafio Full Stack, Brasileirão',
     descricao:
       'Solução full stack para gerenciamento e visualização do Campeonato Brasileiro, com painel administrativo para criação de times, jogos e lançamento de placares. Back-end em PHP 8.4 com Laravel, autenticação via Laravel Sanctum e documentação com Swagger. Front-end em Next.js, React e TypeScript com Tailwind CSS. Toda a stack orquestrada via Docker Compose.',
     tecnologias: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'PHP', 'Laravel', 'MySQL', 'Docker', 'Swagger'],
     imagem: projeto10,
     repositorio: 'https://github.com/pmarsiglia93/desafio-fullstack-brasileirao',
     rodaLocal: true,
-    instrucoesLocal: [
-      'docker-compose up --build',
-    ],
+    avisoLocal: 'Este projeto não possui deploy público completo e pode ser executado localmente com Docker Compose.',
+    instrucoesLocal: ['docker-compose up --build'],
   },
 ];
 
 const Projetos = () => {
   const [modalProjeto, setModalProjeto] = useState(null);
 
-  // Fecha o modal ao clicar fora (overlay)
-  const handleOutsideClick = (e) => {
-    if (e.target.classList.contains('modal')) {
-      setModalProjeto(null);
-    }
+  useEffect(() => {
+    if (!modalProjeto) return undefined;
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') setModalProjeto(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [modalProjeto]);
+
+  const handleOutsideClick = (event) => {
+    if (event.target === event.currentTarget) setModalProjeto(null);
   };
 
   const hasSite = Boolean(modalProjeto?.site);
   const hasRepo = Boolean(modalProjeto?.repositorio);
 
   return (
-    <section className="projetos" id="projetos" aria-label="Projetos">
+    <section className="projetos" id="projetos" aria-labelledby="projetos-titulo">
       <div className="projetos-container">
-        <h2 className="subtitulo">Projetos</h2>
+        <div className="projetos-cabecalho">
+          <h2 className="subtitulo" id="projetos-titulo">Projetos</h2>
+          <p>Uma seleção de aplicações, desafios técnicos e produtos que desenvolvi.</p>
+        </div>
 
         <div className="projetos-grid">
           {projetos.map((projeto) => (
-            <div
+            <button
               key={projeto.id}
               className="projeto-item"
+              type="button"
               onClick={() => setModalProjeto(projeto)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') setModalProjeto(projeto);
-              }}
+              aria-label={`Ver detalhes de ${projeto.titulo}`}
             >
-              <img
-                src={projeto.imagem}
-                alt={projeto.titulo}
-                className="projeto-thumb"
-              />
-              <h3>{projeto.titulo}</h3>
-            </div>
+              <div className={`projeto-media ${!projeto.imagem ? 'projeto-media--texto' : ''}`}>
+                {projeto.imagem ? (
+                  <img src={projeto.imagem} alt="" className="projeto-thumb" />
+                ) : (
+                  <span>{projeto.categoria}</span>
+                )}
+              </div>
+              <div className="projeto-conteudo">
+                <span className="projeto-categoria">{projeto.categoria || projeto.tecnologias[0]}</span>
+                <h3>{projeto.titulo}</h3>
+                <ul className="projeto-tecnologias" aria-label="Principais tecnologias">
+                  {projeto.tecnologias.slice(0, 3).map((tecnologia) => (
+                    <li key={tecnologia}>{tecnologia}</li>
+                  ))}
+                </ul>
+                <span className="projeto-acao" aria-hidden="true">Ver detalhes <span>↗</span></span>
+              </div>
+            </button>
           ))}
         </div>
       </div>
 
       {modalProjeto && (
-        <div className="modal" onClick={handleOutsideClick}>
-          <div className="modal-content">
-            <span className="close" onClick={() => setModalProjeto(null)}>
+        <div className="modal" onMouseDown={handleOutsideClick}>
+          <div
+            className="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-projeto-titulo"
+          >
+            <button className="close" type="button" onClick={() => setModalProjeto(null)} aria-label="Fechar detalhes">
               &times;
-            </span>
+            </button>
 
-            <img
-              src={modalProjeto.imagem}
-              alt={modalProjeto.titulo}
-              className="modal-img"
-            />
+            {modalProjeto.imagem && (
+              <img src={modalProjeto.imagem} alt={`Prévia do projeto ${modalProjeto.titulo}`} className="modal-img" />
+            )}
 
-            <h3>{modalProjeto.titulo}</h3>
-
+            <span className="modal-categoria">{modalProjeto.categoria || modalProjeto.tecnologias[0]}</span>
+            <h3 id="modal-projeto-titulo">{modalProjeto.titulo}</h3>
             <p className="modal-descricao">{modalProjeto.descricao}</p>
 
-            {/* Aviso quando o projeto é apenas local */}
-            {modalProjeto.rodaLocal && (
-              <div className="modal-aviso-local">
-                <p>
-                  Este projeto não possui deploy público, pois depende de uma API
-                  local (JSON Server). Para executar:
-                </p>
-                {Array.isArray(modalProjeto.instrucoesLocal) &&
-                  modalProjeto.instrucoesLocal.length > 0 && (
-                    <ul className="modal-aviso-local-lista">
-                      {modalProjeto.instrucoesLocal.map((linha, idx) => (
-                        <li key={idx}>
-                          <code>{linha}</code>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+            {Array.isArray(modalProjeto.destaques) && modalProjeto.destaques.length > 0 && (
+              <div className="modal-destaques">
+                <h4>Destaques</h4>
+                <ul>
+                  {modalProjeto.destaques.map((destaque) => (
+                    <li key={destaque}>{destaque}</li>
+                  ))}
+                </ul>
               </div>
             )}
 
-            <div className="modal-tecnologias">
-              {modalProjeto.tecnologias.map((tech, index) => (
-                <span key={index} className="tech-tag">
-                  {tech}
-                </span>
+            {modalProjeto.rodaLocal && (
+              <div className="modal-aviso-local">
+                <p>{modalProjeto.avisoLocal} Para executar:</p>
+                {Array.isArray(modalProjeto.instrucoesLocal) && modalProjeto.instrucoesLocal.length > 0 && (
+                  <ul className="modal-aviso-local-lista">
+                    {modalProjeto.instrucoesLocal.map((linha) => (
+                      <li key={linha}><code>{linha}</code></li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+
+            <div className="modal-tecnologias" aria-label="Tecnologias do projeto">
+              {modalProjeto.tecnologias.map((tecnologia) => (
+                <span key={tecnologia} className="tech-tag">{tecnologia}</span>
               ))}
             </div>
 
             <div className="modal-buttons">
-              {/* Só renderiza "Ver Site" se existir site */}
               {hasSite && (
-                <a
-                  href={modalProjeto.site}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  Ver Site
+                <a href={modalProjeto.site} target="_blank" rel="noopener noreferrer" className="btn btn--destaque">
+                  Ver site
                 </a>
               )}
-
-              {/* Renderiza repo se existir */}
               {hasRepo && (
-                <a
-                  href={modalProjeto.repositorio}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  Ver Repositório
+                <a href={modalProjeto.repositorio} target="_blank" rel="noopener noreferrer" className="btn">
+                  Ver repositório
                 </a>
               )}
             </div>

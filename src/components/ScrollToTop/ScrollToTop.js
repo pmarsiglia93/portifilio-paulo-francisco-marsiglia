@@ -31,7 +31,11 @@ const ScrollToTop = () => {
   return (
     <button
       className={`scroll-to-top ${isVisible ? "visible" : ""}`}
+      type="button"
       onClick={scrollToTop}
+      aria-label="Voltar ao topo"
+      aria-hidden={!isVisible}
+      tabIndex={isVisible ? 0 : -1}
     >
       <FaArrowUp />
     </button>
