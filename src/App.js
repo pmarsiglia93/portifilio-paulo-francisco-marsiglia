@@ -1,5 +1,4 @@
-// Atualizando App.js para incluir o Header
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header/Header';
 import Introducao from './components/Introducao/Introducao';
 import Experiencia from './components/Experiencia/Experiencia';
@@ -12,6 +11,28 @@ import './styles/global.css';
 
 
 const App = () => {
+  useEffect(() => {
+    const elementos = document.querySelectorAll('[data-reveal]');
+
+    if (!('IntersectionObserver' in window)) {
+      elementos.forEach((elemento) => elemento.classList.add('is-visible'));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('is-visible');
+          observer.unobserve(entrada.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+    elementos.forEach((elemento) => observer.observe(elemento));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Header />

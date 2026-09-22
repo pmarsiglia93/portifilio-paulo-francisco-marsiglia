@@ -5,22 +5,24 @@ import './Experiencia.css';
 const Experiencia = () => {
   return (
     <section className="container experiencia" id="experiencia" aria-label="Experiência">
-      <h2 className="subtitulo">Experiência</h2>
+      <h2 className="subtitulo" data-reveal>Experiência</h2>
       <div>
-        <p className="experiencia-texto">
-          Desenvolvedor Full Stack com quase 4 anos de experiência, especializado em <strong>React</strong>, <strong>Vue.js</strong> e <strong>Angular</strong> com <strong>TypeScript</strong>, criação de interfaces responsivas e performáticas com fidelidade ao Figma, integração com <strong>APIs REST</strong> e <strong>GraphQL</strong> e desenvolvimento de componentes reutilizáveis seguindo Clean Code e SOLID.
-        </p>
-        <p className="experiencia-texto">
-          No e-commerce, tenho experiência sólida com <strong>VTEX IO</strong> e <strong>Deco.cx</strong> (Preact + Tailwind), tendo atuado em mais de 30 lojas de grandes marcas como Electrolux, Aramis e Bibi Calçados. No back-end, trabalho com <strong>Node.js</strong> (Express e NestJS), <strong>PHP</strong> (Laravel) e <strong>Python</strong> (Django) para construção de APIs REST, autenticação JWT e integração com serviços externos.
-        </p>
-        <p className="experiencia-texto">
-          Já integrei modelos de IA em produção, incluindo a <strong>API do ChatGPT</strong>, em uma plataforma SaaS que gerou <strong>R$ 4,8 milhões em receita nas primeiras 24 horas</strong>. Utilizo ferramentas de <strong>AI-Assisted Development</strong> como Claude, GitHub Copilot e Cursor no dia a dia para acelerar entregas sem abrir mão de qualidade e arquitetura.
-        </p>
-        <p className="experiencia-texto">
-          MBA em <strong>Engenharia de Software</strong> pela <strong>USP/ESALQ</strong> em andamento.
-        </p>
+        <div className="experiencia-resumo" data-reveal style={{ '--reveal-delay': '90ms' }}>
+          <p className="experiencia-texto">
+            Desenvolvedor Full Stack com quase 4 anos de experiência, especializado em <strong>React</strong>, <strong>Vue.js</strong> e <strong>Angular</strong> com <strong>TypeScript</strong>, criação de interfaces responsivas e performáticas com fidelidade ao Figma, integração com <strong>APIs REST</strong> e <strong>GraphQL</strong> e desenvolvimento de componentes reutilizáveis seguindo Clean Code e SOLID.
+          </p>
+          <p className="experiencia-texto">
+            No e-commerce, tenho experiência sólida com <strong>VTEX IO</strong> e <strong>Deco.cx</strong> (Preact + Tailwind), tendo atuado em mais de 30 lojas de grandes marcas como Electrolux, Aramis e Bibi Calçados. No back-end, trabalho com <strong>Node.js</strong> (Express e NestJS), <strong>PHP</strong> (Laravel) e <strong>Python</strong> (Django) para construção de APIs REST, autenticação JWT e integração com serviços externos.
+          </p>
+          <p className="experiencia-texto">
+            Já integrei modelos de IA em produção, incluindo a <strong>API do ChatGPT</strong>, em uma plataforma SaaS que gerou <strong>R$ 4,8 milhões em receita nas primeiras 24 horas</strong>. Utilizo ferramentas de <strong>AI-Assisted Development</strong> como Claude, GitHub Copilot e Cursor no dia a dia para acelerar entregas sem abrir mão de qualidade e arquitetura.
+          </p>
+          <p className="experiencia-texto">
+            Concluí o MBA em <strong>Engenharia de Software</strong> pela <strong>USP/ESALQ</strong> em julho de 2026.
+          </p>
+        </div>
 
-        <div className="empresa empresa--autonomo">
+        <div className="empresa empresa--autonomo" data-reveal>
           <span className="empresa-ano">07/2025 - atual</span>
           <h3 className="empresa-titulo">Autônomo</h3>
           <span className="empresa-cargo">Desenvolvedor Full Stack | Freelancer (PJ)</span>
@@ -69,7 +71,7 @@ const Experiencia = () => {
           </ul>
         </div>
 
-        <div className="empresa">
+        <div className="empresa" data-reveal>
           <span className="empresa-ano">06/2025 - 12/2025</span>
           <h3 className="empresa-titulo">Quality Digital</h3>
           <span className="empresa-cargo">Desenvolvedor Front-end</span>
@@ -95,7 +97,7 @@ const Experiencia = () => {
           </ul>
         </div>
 
-        <div className="empresa">
+        <div className="empresa" data-reveal>
           <span className="empresa-ano">09/2024 - 11/2024</span>
           <h3 className="empresa-titulo">Stalse Analytics</h3>
           <span className="empresa-cargo">Desenvolvedor Full Stack</span>
@@ -120,7 +122,7 @@ const Experiencia = () => {
           </ul>
         </div>
 
-        <div className="empresa">
+        <div className="empresa" data-reveal>
           <span className="empresa-ano">05/2022 - 07/2024</span>
           <h3 className="empresa-titulo">Corebiz</h3>
           <span className="empresa-cargo">Desenvolvedor Front-end</span>
@@ -145,7 +147,7 @@ const Experiencia = () => {
           </ul>
         </div>
 
-        <div className="empresa">
+        <div className="empresa" data-reveal>
           <span className="empresa-ano">06/2016 - 12/2016</span>
           <h3 className="empresa-titulo">Empresa Júnior de Lazer e Turismo</h3>
           <span className="empresa-cargo">Voluntário</span>

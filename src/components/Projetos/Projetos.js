@@ -250,19 +250,21 @@ const Projetos = () => {
   return (
     <section className="projetos" id="projetos" aria-labelledby="projetos-titulo">
       <div className="projetos-container">
-        <div className="projetos-cabecalho">
+        <div className="projetos-cabecalho" data-reveal>
           <h2 className="subtitulo" id="projetos-titulo">Projetos</h2>
           <p>Uma seleção de aplicações, desafios técnicos e produtos que desenvolvi.</p>
         </div>
 
         <div className="projetos-grid">
-          {projetos.map((projeto) => (
+          {projetos.map((projeto, index) => (
             <button
               key={projeto.id}
               className="projeto-item"
               type="button"
               onClick={() => setModalProjeto(projeto)}
               aria-label={`Ver detalhes de ${projeto.titulo}`}
+              data-reveal
+              style={{ '--reveal-delay': `${(index % 3) * 70}ms` }}
             >
               <div className={`projeto-media ${!projeto.imagem ? 'projeto-media--texto' : ''}`}>
                 {projeto.imagem ? (

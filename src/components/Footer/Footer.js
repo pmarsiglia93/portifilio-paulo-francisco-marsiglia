@@ -11,8 +11,8 @@ const Footer = () => {
   return (
     <footer className="footer" id="contato">
       <div className="footer-container">
-        <p className="footer-texto">Estou disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 👋</p>
-        <ul className="footer-contato">
+        <p className="footer-texto" data-reveal>Estou disponível para novos projetos no momento. Entre em contato comigo e marcamos uma conversa 👋</p>
+        <ul className="footer-contato" data-reveal style={{ '--reveal-delay': '90ms' }}>
           <li><a href="mailto:pmarsiglia93@gmail.com">pmarsiglia93@gmail.com</a></li>
           <li><a href={whatsappLink} target="_blank" rel="noopener noreferrer">+55 11 96572-7895</a></li>
           <li className="footer-icons">

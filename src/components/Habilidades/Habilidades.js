@@ -18,9 +18,9 @@ const Habilidades = () => {
   return (
     <section className="habilidades" id="habilidades" aria-labelledby="habilidades-titulo">
       <div className="habilidades-container">
-        <h2 className="subtitulo" id="habilidades-titulo">Habilidades</h2>
+        <h2 className="subtitulo" id="habilidades-titulo" data-reveal>Habilidades</h2>
 
-        <div className="habilidades-conteudo">
+        <div className="habilidades-conteudo" data-reveal style={{ '--reveal-delay': '90ms' }}>
           <p className="habilidades-introducao">
             Tecnologias, plataformas e práticas que utilizo no desenvolvimento de aplicações,
             integrações, e-commerce e automações.

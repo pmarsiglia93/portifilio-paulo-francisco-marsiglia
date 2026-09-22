@@ -14,6 +14,8 @@ describe('portfólio', () => {
     expect(screen.getByRole('heading', { name: 'Autônomo' })).toBeInTheDocument();
     expect(screen.getByText('CervejaBox')).toBeInTheDocument();
     expect(screen.getByText('EAC Personnalité / Barkeley School')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Arquiteturas RAG com LLMs/ })).toBeInTheDocument();
+    expect(screen.getByText('Credencial 7af40af6-f941-4648-ae17-bc85748ee96f')).toBeInTheDocument();
   });
 
   test('abre os detalhes de um projeto com destaques e link real', () => {
