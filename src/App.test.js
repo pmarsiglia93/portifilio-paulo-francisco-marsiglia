@@ -5,6 +5,8 @@ describe('portfólio', () => {
   test('exibe os projetos e as experiências atualizadas', () => {
     render(<App />);
 
+    expect(screen.getByRole('heading', { name: 'VideoGenerator, Automação de Vídeos para Redes Sociais' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'AgendaSaúde, Plataforma de Agendamentos de Consultas' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Zeeway, Painel de Demandas de Produto' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Foody Delivery, Mini Rastreador de Pedidos' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Growth AI Challenge, Widget de Enriquecimento de Produto com IA' })).toBeInTheDocument();
@@ -21,13 +23,13 @@ describe('portfólio', () => {
   test('abre os detalhes de um projeto com destaques e link real', () => {
     render(<App />);
 
-    fireEvent.click(screen.getByRole('button', { name: 'Ver detalhes de Zeeway, Painel de Demandas de Produto' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Ver detalhes de AgendaSaúde, Plataforma de Agendamentos de Consultas' }));
 
-    const dialog = screen.getByRole('dialog', { name: 'Zeeway, Painel de Demandas de Produto' });
-    expect(within(dialog).getByText(/Paginação e ordenação no servidor/)).toBeInTheDocument();
+    const dialog = screen.getByRole('dialog', { name: 'AgendaSaúde, Plataforma de Agendamentos de Consultas' });
+    expect(within(dialog).getByText(/Reservas idempotentes e proteção contra double booking/)).toBeInTheDocument();
     expect(within(dialog).getByRole('link', { name: 'Ver repositório' })).toHaveAttribute(
       'href',
-      'https://github.com/pmarsiglia93/case-zeeway',
+      'https://github.com/pmarsiglia93/plataforma-agendamentos-consultas',
     );
   });
 });

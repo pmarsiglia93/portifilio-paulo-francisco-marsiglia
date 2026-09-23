@@ -14,6 +14,46 @@ import projeto10 from '../../assets/projeto10.png';
 
 const projetos = [
   {
+    id: 17,
+    titulo: 'VideoGenerator, Automação de Vídeos para Redes Sociais',
+    categoria: 'Automação de Mídia',
+    descricao:
+      'Gerador web de vídeos longos e verticais criado para automatizar a produção de conteúdo. A aplicação combina faixas MP3 com imagens ou vídeos de fundo e exporta arquivos prontos para YouTube, Shorts, Reels e TikTok.',
+    tecnologias: [
+      'Python 3.10+', 'FastAPI', 'FFmpeg', 'FFprobe', 'JavaScript',
+      'HTML5', 'CSS3', 'Server-Sent Events',
+    ],
+    destaques: [
+      'Geração em Full HD e no formato vertical 9:16, com modos individual e em lote.',
+      'Progresso do processamento em tempo real via SSE, incluindo percentual, velocidade e estimativa de conclusão.',
+      'Suporte a imagens e vídeos em loop, zoom suave, fundo desfocado, cancelamento e download pela interface.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/VideoGenerator',
+    rodaLocal: true,
+    avisoLocal: 'A aplicação foi projetada para execução local e requer FFmpeg e Python 3.10 ou superior.',
+    instrucoesLocal: ['pip install -r requirements.txt', 'python main.py'],
+  },
+  {
+    id: 18,
+    titulo: 'AgendaSaúde, Plataforma de Agendamentos de Consultas',
+    categoria: 'Plataforma Full Stack',
+    descricao:
+      'Plataforma para pacientes encontrarem profissionais, consultarem horários e agendarem consultas sem risco de dupla reserva. Profissionais administram a disponibilidade e acompanham todo o ciclo de atendimento.',
+    tecnologias: [
+      'Nuxt 4', 'Vue 3', 'Pinia', 'NestJS 11', 'TypeScript', 'MySQL 8',
+      'Redis 7', 'BullMQ', 'Socket.IO', 'Docker', 'Jest',
+    ],
+    destaques: [
+      'Reservas idempotentes e proteção contra double booking com transações e restrições únicas no MySQL.',
+      'Autenticação JWT e Google, refresh token em cookie HttpOnly, rotação de sessão e rate limit compartilhado no Redis.',
+      'Notificações assíncronas com BullMQ e atualizações em tempo real com Socket.IO e Redis Adapter.',
+    ],
+    repositorio: 'https://github.com/pmarsiglia93/plataforma-agendamentos-consultas',
+    rodaLocal: true,
+    avisoLocal: 'O ambiente completo roda localmente com Docker Compose e inclui frontend, API, worker, MySQL e Redis.',
+    instrucoesLocal: ['cp .env.example .env', 'docker compose up -d --build', 'docker compose exec backend npm run migration:run'],
+  },
+  {
     id: 11,
     titulo: 'Zeeway, Painel de Demandas de Produto',
     categoria: 'Aplicação Full Stack',
