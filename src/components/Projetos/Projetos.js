@@ -6,6 +6,8 @@ import projeto2 from '../../assets/projeto2.png';
 import projeto3 from '../../assets/projeto3.png';
 import projeto4 from '../../assets/projeto4.png';
 import projeto5 from '../../assets/projeto5.png';
+import projeto5Perfil from '../../assets/projeto5-perfil.png';
+import projeto5Calculadoras from '../../assets/projeto5-calculadoras.png';
 import projeto6 from '../../assets/projeto6.png';
 import projeto7 from '../../assets/projeto7.png';
 import projeto8 from '../../assets/projeto8.png';
@@ -208,6 +210,23 @@ const projetos = [
       'Temas claro e escuro, seis guias explicativos e interface responsiva com recursos de acessibilidade.',
     ],
     imagem: projeto5,
+    imagens: [
+      {
+        src: projeto5,
+        alt: 'Página inicial do FitCalc com resumo das nove calculadoras',
+        legenda: 'Visão geral do FitCalc',
+      },
+      {
+        src: projeto5Perfil,
+        alt: 'Formulário de perfil compartilhado do FitCalc',
+        legenda: 'Perfil preenchido uma vez para todas as ferramentas',
+      },
+      {
+        src: projeto5Calculadoras,
+        alt: 'Painel do FitCalc com a lista de calculadoras',
+        legenda: 'Nove calculadoras reunidas em um único painel',
+      },
+    ],
     site: 'https://calculadora-tmb-eight.vercel.app/',
     repositorio: 'https://github.com/pmarsiglia93/calculadora-tmb',
   },
@@ -269,25 +288,55 @@ const projetos = [
 
 const Projetos = () => {
   const [modalProjeto, setModalProjeto] = useState(null);
+  const [slideAtual, setSlideAtual] = useState(0);
+
+  const imagensModal = modalProjeto
+    ? (modalProjeto.imagens || (modalProjeto.imagem
+      ? [{
+        src: modalProjeto.imagem,
+        alt: `Prévia do projeto ${modalProjeto.titulo}`,
+        legenda: 'Visão do projeto',
+      }]
+      : []))
+    : [];
 
   useEffect(() => {
     if (!modalProjeto) return undefined;
 
-    const handleEscape = (event) => {
+    const totalImagens = modalProjeto.imagens?.length || (modalProjeto.imagem ? 1 : 0);
+    const handleKeyDown = (event) => {
       if (event.key === 'Escape') setModalProjeto(null);
+      if (totalImagens > 1 && event.key === 'ArrowLeft') {
+        setSlideAtual((atual) => (atual - 1 + totalImagens) % totalImagens);
+      }
+      if (totalImagens > 1 && event.key === 'ArrowRight') {
+        setSlideAtual((atual) => (atual + 1) % totalImagens);
+      }
     };
 
     document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.body.style.overflow = '';
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [modalProjeto]);
 
+  const abrirProjeto = (projeto) => {
+    setSlideAtual(0);
+    setModalProjeto(projeto);
+  };
+
   const handleOutsideClick = (event) => {
     if (event.target === event.currentTarget) setModalProjeto(null);
+  };
+
+  const mostrarSlide = (indice) => {
+    const totalImagens = imagensModal.length;
+    if (totalImagens > 0) {
+      setSlideAtual((indice + totalImagens) % totalImagens);
+    }
   };
 
   const hasSite = Boolean(modalProjeto?.site);
@@ -307,7 +356,7 @@ const Projetos = () => {
               key={projeto.id}
               className="projeto-item"
               type="button"
-              onClick={() => setModalProjeto(projeto)}
+              onClick={() => abrirProjeto(projeto)}
               aria-label={`Ver detalhes de ${projeto.titulo}`}
               data-reveal
               style={{ '--reveal-delay': `${(index % 3) * 70}ms` }}
@@ -346,8 +395,61 @@ const Projetos = () => {
               &times;
             </button>
 
-            {modalProjeto.imagem && (
-              <img src={modalProjeto.imagem} alt={`Prévia do projeto ${modalProjeto.titulo}`} className="modal-img" />
+            {imagensModal.length > 0 && (
+              <div className="modal-galeria" role="region" aria-label={`Galeria de imagens de ${modalProjeto.titulo}`}>
+                <div className="modal-galeria-viewport">
+                  <img
+                    src={imagensModal[slideAtual].src}
+                    alt={imagensModal[slideAtual].alt}
+                    className="modal-img"
+                    decoding="async"
+                  />
+
+                  {imagensModal.length > 1 && (
+                    <>
+                      <button
+                        className="modal-galeria-controle modal-galeria-controle--anterior"
+                        type="button"
+                        onClick={() => mostrarSlide(slideAtual - 1)}
+                        aria-label="Mostrar imagem anterior"
+                      >
+                        ‹
+                      </button>
+                      <button
+                        className="modal-galeria-controle modal-galeria-controle--proximo"
+                        type="button"
+                        onClick={() => mostrarSlide(slideAtual + 1)}
+                        aria-label="Mostrar próxima imagem"
+                      >
+                        ›
+                      </button>
+                      <span className="modal-galeria-contador" aria-live="polite">
+                        {slideAtual + 1} / {imagensModal.length}
+                      </span>
+                    </>
+                  )}
+                </div>
+
+                {imagensModal.length > 1 && (
+                  <div className="modal-galeria-rodape">
+                    <p className="modal-galeria-legenda" aria-live="polite">
+                      {imagensModal[slideAtual].legenda}
+                    </p>
+                    <div className="modal-galeria-indicadores" aria-label="Selecionar imagem da galeria">
+                      {imagensModal.map((imagem, index) => (
+                        <button
+                          key={imagem.src}
+                          className="modal-galeria-indicador"
+                          type="button"
+                          onClick={() => mostrarSlide(index)}
+                          aria-label={`Mostrar imagem ${index + 1}: ${imagem.legenda}`}
+                          aria-current={index === slideAtual ? 'true' : undefined}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             )}
 
             <span className="modal-categoria">{modalProjeto.categoria || modalProjeto.tecnologias[0]}</span>

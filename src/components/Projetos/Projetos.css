@@ -235,12 +235,109 @@
     transform: rotate(4deg);
 }
 
+.modal-galeria {
+    clear: both;
+    margin-bottom: 28px;
+}
+
+.modal-galeria-viewport {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--raio-medio);
+    background-color: var(--cor-fundo-escuro);
+}
+
 .modal-img {
     width: 100%;
-    max-height: 330px;
-    margin-bottom: 28px;
-    border-radius: var(--raio-medio);
+    aspect-ratio: 16 / 9;
+    margin: 0;
     object-fit: cover;
+}
+
+.modal-galeria-controle {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0 0 4px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    background-color: rgba(20, 20, 20, 0.78);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    transform: translateY(-50%);
+    transition: background-color var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.modal-galeria-controle:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-preto);
+    transform: translateY(-50%) scale(1.06);
+}
+
+.modal-galeria-controle--anterior {
+    left: 14px;
+}
+
+.modal-galeria-controle--proximo {
+    right: 14px;
+}
+
+.modal-galeria-contador {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: rgba(20, 20, 20, 0.82);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+}
+
+.modal-galeria-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.modal-galeria-legenda {
+    color: var(--cor-texto-suave);
+    font-size: 0.82rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.modal-galeria-indicadores {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 6px;
+}
+
+.modal-galeria-indicador {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background-color: #c8c8c2;
+    cursor: pointer;
+    transition: background-color var(--transicao), width var(--transicao);
+}
+
+.modal-galeria-indicador[aria-current="true"] {
+    width: 24px;
+    background-color: var(--cor-destaque);
 }
 
 .modal-categoria {

@@ -41,6 +41,16 @@ describe('portfólio', () => {
 
     const dialog = screen.getByRole('dialog', { name: 'FitCalc, Calculadoras de Nutrição e Treino' });
     expect(within(dialog).getByText(/Mifflin-St Jeor, Harris-Benedict, Karvonen e Riegel/)).toBeInTheDocument();
+    expect(within(dialog).getByRole('img', { name: 'Página inicial do FitCalc com resumo das nove calculadoras' })).toBeInTheDocument();
+    expect(within(dialog).getByText('1 / 3')).toBeInTheDocument();
+
+    fireEvent.click(within(dialog).getByRole('button', { name: 'Mostrar próxima imagem' }));
+    expect(within(dialog).getByRole('img', { name: 'Formulário de perfil compartilhado do FitCalc' })).toBeInTheDocument();
+
+    fireEvent.keyDown(document, { key: 'ArrowRight' });
+    expect(within(dialog).getByRole('img', { name: 'Painel do FitCalc com a lista de calculadoras' })).toBeInTheDocument();
+    expect(within(dialog).getByText('3 / 3')).toBeInTheDocument();
+
     expect(within(dialog).getByRole('link', { name: 'Ver site' })).toHaveAttribute(
       'href',
       'https://calculadora-tmb-eight.vercel.app/',
