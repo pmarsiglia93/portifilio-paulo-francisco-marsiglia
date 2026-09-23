@@ -13,6 +13,7 @@ describe('portfólio', () => {
     expect(screen.getByRole('heading', { name: 'JobMatch AI, Recomendação Inteligente de Vagas no Telegram' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Bank API, Simulação de Banco Digital' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Prothera Iniflex, Gestão de Funcionários' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'FitCalc, Calculadoras de Nutrição e Treino' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Autônomo' })).toBeInTheDocument();
     expect(screen.getByText('CervejaBox')).toBeInTheDocument();
     expect(screen.getByText('EAC Personnalité / Barkeley School')).toBeInTheDocument();
@@ -30,6 +31,19 @@ describe('portfólio', () => {
     expect(within(dialog).getByRole('link', { name: 'Ver repositório' })).toHaveAttribute(
       'href',
       'https://github.com/pmarsiglia93/plataforma-agendamentos-consultas',
+    );
+  });
+
+  test('apresenta os detalhes atualizados do FitCalc', () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Ver detalhes de FitCalc, Calculadoras de Nutrição e Treino' }));
+
+    const dialog = screen.getByRole('dialog', { name: 'FitCalc, Calculadoras de Nutrição e Treino' });
+    expect(within(dialog).getByText(/Mifflin-St Jeor, Harris-Benedict, Karvonen e Riegel/)).toBeInTheDocument();
+    expect(within(dialog).getByRole('link', { name: 'Ver site' })).toHaveAttribute(
+      'href',
+      'https://calculadora-tmb-eight.vercel.app/',
     );
   });
 });

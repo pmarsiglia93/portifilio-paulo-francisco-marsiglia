@@ -197,10 +197,16 @@ const projetos = [
   },
   {
     id: 5,
-    titulo: 'Calculadora de gasto energético',
+    titulo: 'FitCalc, Calculadoras de Nutrição e Treino',
+    categoria: 'Saúde e Performance',
     descricao:
-      'Esta calculadora foi desenvolvida com React para estimar a taxa de metabolismo basal (TMB), tanto em repouso quanto com diferentes níveis de atividade física: sedentária, moderada e intensa.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'React'],
+      'O FitCalc reúne nove calculadoras de saúde, nutrição e performance em uma única aplicação. O usuário preenche o perfil uma vez e reutiliza os dados em ferramentas de gasto energético, macronutrientes, composição corporal, hidratação, treino e corrida.',
+    tecnologias: ['React 19', 'JavaScript', 'CSS3', 'Context API', 'localStorage', 'Jest'],
+    destaques: [
+      'Nove calculadoras com fórmulas reconhecidas, incluindo Mifflin-St Jeor, Harris-Benedict, Karvonen e Riegel.',
+      'Perfil compartilhado entre todas as ferramentas e persistido somente no navegador, sem coleta de dados.',
+      'Temas claro e escuro, seis guias explicativos e interface responsiva com recursos de acessibilidade.',
+    ],
     imagem: projeto5,
     site: 'https://calculadora-tmb-eight.vercel.app/',
     repositorio: 'https://github.com/pmarsiglia93/calculadora-tmb',
@@ -292,7 +298,7 @@ const Projetos = () => {
       <div className="projetos-container">
         <div className="projetos-cabecalho" data-reveal>
           <h2 className="subtitulo" id="projetos-titulo">Projetos</h2>
-          <p>Uma seleção de aplicações, desafios técnicos e produtos que desenvolvi.</p>
+          <p>Produtos digitais, automações e desafios técnicos apresentados com contexto, stack e decisões de cada projeto.</p>
         </div>
 
         <div className="projetos-grid">
@@ -308,7 +314,7 @@ const Projetos = () => {
             >
               <div className={`projeto-media ${!projeto.imagem ? 'projeto-media--texto' : ''}`}>
                 {projeto.imagem ? (
-                  <img src={projeto.imagem} alt="" className="projeto-thumb" />
+                  <img src={projeto.imagem} alt="" className="projeto-thumb" loading="lazy" decoding="async" />
                 ) : (
                   <span>{projeto.categoria}</span>
                 )}
